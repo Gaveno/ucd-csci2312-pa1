@@ -6,6 +6,7 @@
 
 #include "ErrorContext.h"
 #include "PointTests.h"
+#include "Point.h"
 
 using std::cout;
 using std::endl;
