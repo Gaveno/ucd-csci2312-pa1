@@ -9,7 +9,7 @@ C++ lets us program with _objects_. We describe objects in C++ by declaring and 
 Here is a sample header file <tt>Point.h</tt> that describes an object that represents a point in two-dimensional Euclidean space:
 
 ```c++
-// A 2-dimensional point class!
+// A 3-dimensional point class!
 // Coordinates are double-precision floating point.
 class Point {
 
@@ -20,7 +20,7 @@ private:
 public:
     // Constructors
     Point();                      // default constructor
-    Point(double x, double y);    // two-argument constructor
+    Point(double x, double y, double z);    // three-argument constructor
 
     // Destructor
     ~Point();
@@ -28,10 +28,15 @@ public:
     // Mutator methods
     void setX(double newX);
     void setY(double newY);
+    void setZ(double newZ);
 
     // Accessor methods
     double getX() const;
     double getY() const;
+    double getZ() const;
+
+    // Get distance to another point
+    double distanceTo(const Point &comparePoint) const;
 
 };
 ```
@@ -40,7 +45,7 @@ We can _instantiate_, or create an instance of, our class anywhere in the rest o
 
 ```
 Point myPoint;            // Calls Point::Point(). Notice the lack of parentheses!
-Point myOtherPoint(5, 3); // Calls two-argument constructor Point::Point(double, double). Notice auto type conversion!
+Point myOtherPoint(5, 3, 2); // Calls three-argument constructor Point::Point(double, double, double). Notice auto type conversion!
 ```
 
 ### Your Task
