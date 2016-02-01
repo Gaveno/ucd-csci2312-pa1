@@ -16,6 +16,7 @@ class Point {
 private:
     double x;
     double y;
+    double z;
 
 public:
     // Constructors
